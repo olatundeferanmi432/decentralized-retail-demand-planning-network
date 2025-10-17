@@ -1,0 +1,28 @@
+[project]
+name = 'decentralized-retail-demand-planning-network'
+description = ''
+authors = []
+telemetry = true
+cache_dir = './.cache'
+requirements = []
+[contracts.demand-planning-coordinator]
+path = 'contracts/demand-planning-coordinator.clar'
+clarity_version = 3
+epoch = 3.1
+
+[contracts.supplier-collaboration-hub]
+path = 'contracts/supplier-collaboration-hub.clar'
+clarity_version = 3
+epoch = 3.1
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
+
+[repl.remote_data]
+enabled = false
+api_url = 'https://api.hiro.so'
